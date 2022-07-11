@@ -1,4 +1,4 @@
-# Myth:Auth
+# CI4Plus:Auth
 
 [![](https://github.com/lonnieezell/myth-auth/workflows/PHPUnit/badge.svg)](https://github.com/lonnieezell/myth-auth/actions?query=workflow%3A%22PHPUnit%22)
 [![](https://github.com/lonnieezell/myth-auth/workflows/PHPStan/badge.svg)](https://github.com/lonnieezell/myth-auth/actions?query=workflow%3A%22PHPStan)
@@ -32,22 +32,22 @@ the following command:
 
     > composer require myth/auth
 
-This will add the latest stable release of **Myth\Auth** as a module to your project. Note that
+This will add the latest stable release of **CI4Plus\Auth** as a module to your project. Note that
 you may need to adjust your project's
 [minimum stability ](http://webtips.krajee.com/setting-composer-minimum-stability-application/)
-in order to use **Myth\Auth** while it is in beta.
+in order to use **CI4Plus\Auth** while it is in beta.
 
 ### Manual Installation
 
 Should you choose not to use Composer to install, you can clone or download this repo and
-then enable it by editing **app/Config/Autoload.php** and adding the **Myth\Auth**
+then enable it by editing **app/Config/Autoload.php** and adding the **CI4Plus\Auth**
 namespace to the **$psr4** array. For example, if you copied it into **app/ThirdParty**:
 ```php
     $psr4 = [
         'Config'      => APPPATH . 'Config',
         APP_NAMESPACE => APPPATH,
         'App'         => APPPATH,
-        'Myth\Auth'   => APPPATH .'ThirdParty/myth-auth/src',
+        'CI4Plus\Auth'   => APPPATH .'ThirdParty/myth-auth/src',
     ];
 ```
 
@@ -58,14 +58,14 @@ necessary steps to take after upgrading versions.
 
 ## Configuration
 
-Once installed you need to configure the framework to use the **Myth\Auth** library.
+Once installed you need to configure the framework to use the **CI4Plus\Auth** library.
 In your application, perform the following setup: 
 
 1. Edit **app/Config/Email.php** and verify that a **fromName** and **fromEmail** are set 
     as that is used when sending emails for password reset, etc. 
 
 2. Edit **app/Config/Validation.php** and add the following value to the **ruleSets** array: 
-    `\Myth\Auth\Authentication\Passwords\ValidationRules::class`
+    `\CI4Plus\Auth\Authentication\Passwords\ValidationRules::class`
 
 3. Ensure your database is setup correctly, then run the Auth migrations: 
 
@@ -98,11 +98,11 @@ You can easily override the views used by editing Config/Auth.php, and changing 
 within the `$views` variable: 
 
     public $views = [
-        'login'     => 'Myth\Auth\Views\login',
-        'register'  => 'Myth\Auth\Views\register',
-        'forgot'    => 'Myth\Auth\Views\forgot',
-        'reset'     => 'Myth\Auth\Views\reset',
-        'emailForgot' => 'Myth\Auth\Views\emails\forgot',
+        'login'     => 'CI4Plus\Auth\Views\login',
+        'register'  => 'CI4Plus\Auth\Views\register',
+        'forgot'    => 'CI4Plus\Auth\Views\forgot',
+        'reset'     => 'CI4Plus\Auth\Views\reset',
+        'emailForgot' => 'CI4Plus\Auth\Views\emails\forgot',
     ];
 
 NOTE: If you're not familiar with how views can be namespaced in CodeIgniter, please refer to 
@@ -150,7 +150,7 @@ you must first edit **app/Config/Validation.php** and add the new ruleset to the
         \CodeIgniter\Validation\FormatRules::class,
         \CodeIgniter\Validation\FileRules::class,
         \CodeIgniter\Validation\CreditCardRules::class,
-        \Myth\Auth\Authentication\Passwords\ValidationRules::class,
+        \CI4Plus\Auth\Authentication\Passwords\ValidationRules::class,
     ];
     
 Now you can use `strong_password` in any set of rules for validation:
@@ -236,7 +236,7 @@ the list of active collectors:
 		\CodeIgniter\Debug\Toolbar\Collectors\Timers::class,
 		\CodeIgniter\Debug\Toolbar\Collectors\Database::class,
         ...
-		\Myth\Auth\Collectors\Auth::class,
+		\CI4Plus\Auth\Collectors\Auth::class,
 	];
 ```
 
@@ -248,9 +248,9 @@ to users by group/role or permission with [Controller Filters](https://codeignit
 First, edit `application/Config/Filters.php` and add the following entries to the `aliases` property:
 
 ```php
-    'login'      => \Myth\Auth\Filters\LoginFilter::class,
-    'role'       => \Myth\Auth\Filters\RoleFilter::class,
-    'permission' => \Myth\Auth\Filters\PermissionFilter::class,
+    'login'      => \CI4Plus\Auth\Filters\LoginFilter::class,
+    'role'       => \CI4Plus\Auth\Filters\RoleFilter::class,
+    'permission' => \CI4Plus\Auth\Filters\PermissionFilter::class,
 ```
 
 **Global restrictions**
