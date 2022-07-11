@@ -1,8 +1,8 @@
 # CI4Plus:Auth
 
-[![](https://github.com/lonnieezell/myth-auth/workflows/PHPUnit/badge.svg)](https://github.com/lonnieezell/myth-auth/actions?query=workflow%3A%22PHPUnit%22)
-[![](https://github.com/lonnieezell/myth-auth/workflows/PHPStan/badge.svg)](https://github.com/lonnieezell/myth-auth/actions?query=workflow%3A%22PHPStan)
-[![Coverage Status](https://coveralls.io/repos/github/lonnieezell/myth-auth/badge.svg?branch=develop)](https://coveralls.io/github/lonnieezell/myth-auth?branch=develop)
+[![](https://github.com/OCIPlus/Auth/workflows/PHPUnit/badge.svg)](https://github.com/OCIPlus/Auth/actions?query=workflow%3A%22PHPUnit%22)
+[![](https://github.com/OCIPlus/Auth/workflows/PHPStan/badge.svg)](https://github.com/OCIPlus/Auth/actions?query=workflow%3A%22PHPStan)
+[![Coverage Status](https://coveralls.io/repos/github/OCIPlus/Auth/badge.svg?branch=develop)](https://coveralls.io/github/OCIPlus/Auth?branch=develop)
 
 Flexible, Powerful, Secure auth package for CodeIgniter 4.
 
@@ -30,7 +30,7 @@ the following primary features:
 Installation is best done via Composer. Assuming Composer is installed globally, you may use
 the following command: 
 
-    > composer require CI4Plus/auth
+    > composer require codeigniterplus/auth
 
 This will add the latest stable release of **CI4Plus\Auth** as a module to your project. Note that
 you may need to adjust your project's
