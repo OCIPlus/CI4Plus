@@ -30,7 +30,7 @@ the following primary features:
 Installation is best done via Composer. Assuming Composer is installed globally, you may use
 the following command: 
 
-    > composer require myth/auth
+    > composer require CI4Plus/auth
 
 This will add the latest stable release of **CI4Plus\Auth** as a module to your project. Note that
 you may need to adjust your project's
