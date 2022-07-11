@@ -1,14 +1,13 @@
 {
-    "name": "codeigniter4/appstarter",
+    "name": "OCIPlus/CI4Plus",
     "type": "project",
-    "description": "CodeIgniter4 starter app",
-    "homepage": "https://codeigniter.com",
+    "description": "CodeIgniter4 starter app plus",
+    "homepage": "https://www.codeigniterplus.xyz",
     "license": "MIT",
     "require": {
         "php": "^7.4 || ^8.0",
         "codeigniter4/framework": "^4.0",
-        "codeigniter4/translations": "^4.2",
-        "gerencianet/gerencianet-sdk-php": "^4.1"
+        "codeigniter4/translations": "^4.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",
@@ -35,8 +34,8 @@
         "test": "phpunit"
     },
     "support": {
-        "forum": "http://forum.codeigniter.com/",
-        "source": "https://github.com/codeigniter4/CodeIgniter4",
-        "slack": "https://codeigniterchat.slack.com"
+        "forum": "http://forum.codeigniterplus.xyz/", 
+        "source": "https://github.com/OCIPlus/CI4Plus",
+        "slack": "https://codeigniterpluschat.slack.com"
     }
 }
